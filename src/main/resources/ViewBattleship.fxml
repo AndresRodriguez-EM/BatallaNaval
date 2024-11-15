@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="andres.batallanaval.Controller.ControllerBattleship">
+    <children>
+        <!-- Contenedor para los barcos en la parte superior, para arrastrar y soltar en el tablero -->
+        <HBox fx:id="shipsContainer" spacing="10" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" alignment="CENTER">
+            <!-- Imágenes de los barcos se agregarán aquí dinámicamente desde el controlador -->
+        </HBox>
+
+        <!-- Grid para el tablero de batalla -->
+        <GridPane fx:id="boardGrid" hgap="5" vgap="5" AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.bottomAnchor="100.0">
+            <!-- Aquí se agregará el tablero de 10x10 dinámicamente desde el controlador -->
+        </GridPane>
+
+        <!-- Contenedor para los botones en la parte inferior, alineado al centro -->
+        <HBox spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" alignment="CENTER">
+            <!-- Botón para reiniciar el juego -->
+            <Button fx:id="resetButton" onAction="#resetGame" text="Reiniciar Juego" />
+
+            <!-- Botón para iniciar el juego -->
+            <Button fx:id="startButton" onAction="#startGame" text="Iniciar Juego" />
+
+            <!-- Botón para mostrar las instrucciones -->
+            <Button fx:id="instructionsButton" onAction="#showInstructions" text="Instrucciones" />
+        </HBox>
+    </children>
+</AnchorPane>
